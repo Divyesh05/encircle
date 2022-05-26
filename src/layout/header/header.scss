@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'poppins', serif;
+}
+.slide-title {
+  font-family: 'Regulator Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+  color: #fdfdfb;
+}
+
+.header {
+  // background: linear-gradient(180deg, #206E87 0%, rgba(0, 0, 0, 0) 100%) ;
+  background-image: url('../../assets/images/header-background.png');
+  // opacity: 0.2;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hambergur {
+  width: 1.6rem;
+  div {
+    width: 1.6rem;
+    height: 2px;
+    border: 1px solid #fff;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    &:nth-child(2) {
+      width: 1.3rem;
+      background: #fff;
+    }
+  }
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 1rem;
+
+  @media (min-width: 720px) {
+    padding: 0.5rem 2rem;
+  }
+}
+
+.fullscreen {
+  clip-path: circle(0% at 96.5% 4%);
+  position: absolute;
+  background: #1e1f25;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 0.5s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    li {
+      padding: 0.5rem 1rem;
+
+      a {
+        font-size: 1.5rem;
+        background: -webkit-linear-gradient(
+          45deg,
+          rgba(182, 143, 213, 1) 0%,
+          rgba(255, 174, 174, 0.68531162464986) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 1.3rem;
+    right: 2.355rem;
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(45deg);
+
+    div {
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        content: '';
+        width: 2rem;
+        height: 2px;
+        border: 1px solid red;
+        position: absolute;
+        border-radius: 5px;
+      }
+
+      &:after {
+        transform: rotate(90deg);
+        background: red;
+      }
+    }
+  }
+
+  &.active {
+    clip-path: circle(140% at 96.5% 4%);
+    transition: all 0.7s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+
+    ul > li {
+      animation: animateIn 360ms ease-in-out
+        calc(var(--animation-order) * 100ms) both;
+    }
+  }
+
+  &.reverse_anim {
+    clip-path: circle(0% at 96.5% 4%);
+    opacity: 0.6;
+    transition: all 0.4s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+  }
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: translateX(10px) rotate(2deg);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo a {
+  color: #fff;
+  font-size: 1.2rem;
+}

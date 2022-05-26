@@ -1,0 +1,46 @@
+.section-title {
+  font-family: 'Regulator Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 58px;
+  /* or 138% */
+
+  /* Charcoal */
+
+  color: #3a3a3a;
+}
+
+.section-description {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  /* Steel */
+
+  color: #838383;
+}
+
+.section-btn {
+  opacity: 0.2;
+  /* Charcoal */
+
+  border: 1px solid #3a3a3a;
+  border-radius: 1000px;
+
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  /* identical to box height, or 154% */
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #3a3a3a;
+}
